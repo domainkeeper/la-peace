@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-genz-50 text-gray-900 antialiased min-h-screen;
+  }
+
+  ::selection {
+    @apply bg-peach-500 text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg;
+  }
+
+  .btn-genz {
+    @apply px-6 py-3 rounded-full font-semibold transition-all duration-200 active:scale-95 disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn-genz bg-genz-600 text-white hover:bg-genz-700 shadow-lg shadow-genz-500/30;
+  }
+
+  .btn-peach {
+    @apply btn-genz bg-peach-500 text-white hover:bg-peach-600 shadow-lg shadow-peach-500/30;
+  }
+
+  .btn-lavender {
+    @apply btn-genz bg-lavender-500 text-white hover:bg-lavender-600 shadow-lg shadow-lavender-500/30;
+  }
+
+  .btn-outline {
+    @apply btn-genz border-2 border-genz-600 text-genz-600 hover:bg-genz-600 hover:text-white;
+  }
+
+  .input-genz {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-genz-500 focus:border-transparent transition-all;
+  }
+
+  .attendance-card {
+    @apply glass-card p-6 rounded-3xl relative overflow-hidden;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-genz-600 via-peach-500 to-lavender-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
